@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: devops-toolkit
@@ -8,9 +8,11 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - http:
+  - host: devopstoolkitseries.com
+    http:
       paths:
-      - backend:
+      - path: /
+        backend:
           serviceName: devops-toolkit
           servicePort: 80
-    host: devopstoolkitseries.com
+    
