@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: devopstoolkitseries.com
+  - host: devops.com
     http:
       paths:
       - path: /
